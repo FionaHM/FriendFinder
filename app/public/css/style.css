@@ -6,3 +6,6 @@
 	padding-right: 15px;
 	padding-left: 15px;
 }
+.option-selected {
+	display: block;
+}

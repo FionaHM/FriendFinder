@@ -14,15 +14,13 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
  
 
-// navigate to the survey.html page
-app.get("/survey", function (req, res) {
-   res.sendFile(path.join(__dirname, "./app/public/survey.html"));
-})
- 
-app.use(function (req, res) {
-	// if the user types in any path that does not have a get or post
-	// they will be directed to the home page
-   res.sendFile(path.join(__dirname, "./app/public/home.html"));
-})
- 
+
+
+// link to apiRoutes file passing the app variable.
+require('./app/routing/apiRoutes.js')(app);
+
+// link to htmlRoutes file passing the app variable.
+require('./app/routing/htmlRoutes.js')(app);
+
+
 app.listen(PORT);
