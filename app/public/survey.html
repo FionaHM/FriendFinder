@@ -217,22 +217,20 @@
 	});
 	// reset form data
 
-	newFriend.name = $('#name').val("");
- 	newFriend.photo = $('#photo').val("");
- // 	$('.option-selected').each(function( i ) {
-	// 	$(this).prop('selectedIndex',0);
-	// });
+	$('#name').val("");
+ 	$('#photo').val("");
+ 	$('.option-selected').each(function( i ) {
+		$(this).prop('selectedIndex',0);
+	});
 	// post to server
 	
  	var currentURL = window.location.origin;
- 	// if (newFriend.name !== ""){
- 		console.log(newFriend);
+ 	if (newFriend.name !== ""){
 	$.post(currentURL + '/api/friends', newFriend, function(data){
-	// modal with best match
-	//  	console.log("arrg");
-	// console.log(data);
-	});
- 	// }
+		// modal with best match
+			console.log(data);
+		});
+ 	}
 
 
 });

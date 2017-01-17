@@ -30,9 +30,11 @@ module.exports = function(app){
 				score += Math.abs((parseInt(newFriend.scores[j]) - parseInt(friends[i].scores[j])));
 			}
 			scoreArr.push(parseInt(score));
-
+			console.log("minScoreIndex", minScoreIndex);
+			console.log("scoreArr", scoreArr[i]);
 			if (i > 1) {
-				if (scoreArr[i] < scoreArr[i-1]){
+				if (scoreArr[minScoreIndex] > scoreArr[i]){
+					console.log(scoreArr[minScoreIndex], "<" ,scoreArr[minScoreIndex])
 					minScoreIndex = i;
 				}
 			}
