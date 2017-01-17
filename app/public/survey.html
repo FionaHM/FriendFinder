@@ -17,31 +17,28 @@
  		<h1>Friend Finder</h1>
       <hr>
 	</div>
- 		<!-- <div class="row"> -->
+ 	<form>
 		<div class="row">
 	 		<div class="col-md-12">
 		    	<h1>Survey Questions</h1>
 		    	<hr>
 		    </div>
-			<!-- </div> -->
-		
 		</div>
 		<div class="row">
 			<div class="col-md-12">
 		    	<h2><label>About You</label></h2>
 			  	<div class="form-group">
 				    <label for="name">Name (Required)</label>
-				    <input type="text" class="form-control" id="name" required>
+				    <input placeholder="name" type="text" class="form-control" id="name" required />
 			  	</div>
 			  	<div class="form-group">
-				    <label for="name">Link to Photo Image (Required)</label>
-				    <input type="text" class="form-control" id="name" required>
+				    <label for="photo" required>Link to Photo Image (Required)</label>
+				    <input type="text" placeholder="url" class="form-control" id="photo" required />
 			  	</div>
 			</div>
 		</div>	
 	  	<div class="row">
-	  		<div class="col-md-12">
-				
+	  		<div class="col-md-12">	
 			    <h2><strong>Question 1</strong></h2>
 			    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
 				<select class="option-selected form-control" id="q1" required>
@@ -170,7 +167,7 @@
 	  		<div class="col-md-12">
 			    <h2><strong>Question 10</strong></h2>
 			    <p>You feel more energetic after spending time with a group of people.</p>
-				<select class="option-selected form-control" id="q10" required>
+				<select required class="option-selected form-control" id="q10">
 					<option selected disabled>Select an Option</option>
 					<option value="1">1 (Strongly Disagree)</option>
 					<option value="2">2</option>
@@ -181,11 +178,13 @@
 			</div>
 	  	</div>
 		  	
-		  <br><br>
-  		<button type="submit" class="btn btn-primary btn-block" id="submitSurvey"><span class="glyphicon glyphicon-ok" aria-hidden="true">   Submit</span></button>
-		</form> 
-		<br>
-
+		<br><br>
+  		<button type="submit" class="btn btn-primary btn-block" id="submitSurvey">
+	  		<span class="glyphicon glyphicon-ok" aria-hidden="true">
+	  		Submit
+	  		</span>
+  		</button>
+	</form> 
 
 </div>  <!-- end of container div -->
 
@@ -196,12 +195,52 @@
       </div>
 </footer>
 
-
-
-
-
-
-
-
 </body>
+<script type="text/javascript">
+ // // when the user clicks the submit button 
+ // //post the data to the server
+
+ $('#submitSurvey').on('click', function(e){
+ 	var newFriend = {
+ 		name: "",
+ 		photo: "",
+ 		scores: []
+ 	};
+ 	
+ 	e.preventDefault(); // stop the page refresh
+ 	// grab the values from the fields
+ 	newFriend.name = $('#name').val();
+ 	newFriend.photo = $('#photo').val();
+	// // loop through each question and save to array scores.
+	$('.option-selected').each(function( i ) {
+		newFriend.scores.push(parseInt($(this).val()));
+	});
+	// reset form data
+
+	newFriend.name = $('#name').val("");
+ 	newFriend.photo = $('#photo').val("");
+ // 	$('.option-selected').each(function( i ) {
+	// 	$(this).prop('selectedIndex',0);
+	// });
+	// post to server
+	
+ 	var currentURL = window.location.origin;
+ 	// if (newFriend.name !== ""){
+ 		console.log(newFriend);
+	$.post(currentURL + '/api/friends', newFriend, function(data){
+	// modal with best match
+	//  	console.log("arrg");
+	// console.log(data);
+	});
+ 	// }
+
+
+});
+
+	
+ // 	// get back match and display in modal.
+
+
+
+</script>
 </html>

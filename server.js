@@ -9,7 +9,8 @@ var PORT = process.env.PORT || 8080;
 // parse application/json 
 app.use(bodyParser.json());
 // parse application/x-www-form-urlencoded 
-app.use(bodyParser.urlencoded({ extended: false }));
+// found urlencoded extended must be true for nested arrays
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
  
