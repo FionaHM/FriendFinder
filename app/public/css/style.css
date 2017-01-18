@@ -9,3 +9,25 @@
 .option-selected {
 	display: block;
 }
+.modal-content{
+	background-color: darkgrey;
+}
+.results-img{
+	max-height: 300px;
+	max-width: 300px;
+}
+.qstar{
+	display: none;
+	color: red;
+}
+#results-modal {
+	display: none;
+	z-index: 1000;
+	/*background-color: darkgrey;*/
+	/*color: white;*/
+}
+/*#results{
+	height: 350px;
+	width: 400px;
+	
+}*/

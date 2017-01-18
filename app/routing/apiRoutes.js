@@ -3,11 +3,11 @@ var friends = require("../data/friends.js");
 
 module.exports = function(app){
 	app.get("/api/friends", function (req, res) {
-	  // // We then display the JSON to the caller
+	  //display the JSON to the caller
 	  res.json(friends);
 	})
 
-	// will use this later...
+	// post data - update friends array and find match
 	app.post("/api/friends", function (req, res) {
 
 	  // // We then display the JSON to the caller
@@ -29,26 +29,19 @@ module.exports = function(app){
 				// for the first friend get the score
 				score += Math.abs((parseInt(newFriend.scores[j]) - parseInt(friends[i].scores[j])));
 			}
+			// add to scores array
+			// do comparison or scores
 			scoreArr.push(parseInt(score));
-			console.log("minScoreIndex", minScoreIndex);
-			console.log("scoreArr", scoreArr[i]);
-			if (i > 1) {
+			if (i > 0) {
 				if (scoreArr[minScoreIndex] > scoreArr[i]){
-					console.log(scoreArr[minScoreIndex], "<" ,scoreArr[minScoreIndex])
 					minScoreIndex = i;
 				}
 			}
 
 		}
-		console.log("scoreArr", scoreArr);
-		// var minScore = Math.min(scoreArr);
-		// console.log("minScore", minScore);
-		// var indexOfFriend = scoreArr.indexOf(minScore);
-		// get min score from array 
-		console.log(minScoreIndex);
+		// get friend at minScoreIndex from friends array and send to client side
 		res.json(friends[minScoreIndex]);
-		// console.log("index",indexOfFriend);
-		// lastly push new friend to the array
+		// lastly push new friend to the storage array
 		friends.push(newFriend);
 
 	})
