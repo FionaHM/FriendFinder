@@ -254,7 +254,7 @@
  	}
  	// if a question not answered
  	else if (nullQuestion) {
-		nullQuestion()
+		emptyQuestion()
  	}  else {
 	 	// all fields answered then post the data 
 	 	// first reset form data
@@ -327,7 +327,7 @@ function missingPhotoData(){
 	modalMessage(messageArr);
 }
 // questions not answered
-function nullQuestion(){
+function emptyQuestion(){
 	var title = "Answer All Questions!" ;
 	var message1 = '<p>Please answer <em>ALL</em> questions</p>';
 	var messageArr = [title, message1];
