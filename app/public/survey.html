@@ -7,281 +7,270 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- <link rel="stylesheet" href="./css/font-awesome.min.css"> -->
   <link rel="stylesheet" type="text/css" href="/css">
-
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron">
- 		<h1>Friend Finder</h1>
-      <hr>
-	</div>
- 	<form>
-		<div class="row">
-	 		<div class="col-md-12">
-		    	<h1>Survey Questions</h1>
-		    	<hr>
-		    </div>
+	<div class="container">
+	    <div class="jumbotron">
+	 		<h1>Friend Finder</h1>
+	      <hr>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-		    	<h2><label>About You</label></h2>
-			  	<div class="form-group">
-				    <label for="name">Name (Required)</label>
-				    <input placeholder="name" type="text" class="form-control" id="name" required />
-			  	</div>
-			  	<div class="form-group">
-				    <label for="photo" required>Link to Photo Image (Required)</label>
-				    <input type="text" placeholder="url" class="form-control" id="photo" required />
-			  	</div>
+	 	<form>
+			<div class="row">
+		 		<div class="col-md-12">
+			    	<h1>Survey Questions</h1>
+			    	<hr>
+			    </div>
 			</div>
-		</div>	
-	  	<div class="row">
-	  		<div class="col-md-12">	
-			    <h2><strong><p id="q1star" class="qstar" >Question 1</p></strong></h2>
-			    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-				<select class="option-selected form-control" id="q1" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q2star" class="qstar" >Question 2</p></strong></h2>
-			    <p>Generally speaking, you rely more on experience than your imagination.</p>
-				<select class="option-selected form-control" id="q2" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q3star" class="qstar" >Question 3</p></strong></h2>
-			    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-				<select class="option-selected form-control" id="q3" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			     <h2><strong><p id="q4star" class="qstar" >Question 4</p></strong></h2>
-			    <p>You rarely do something just out of sheer curiosity.</p>
-				<select class="option-selected form-control" id="q4" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			     <h2><strong><p id="q5star" class="qstar" >Question 5</p></strong></h2>
-			    <p>People can rarely upset you.</p>
-				<select class="option-selected form-control" id="q5" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q6star" class="qstar" >Question 6</p></strong></h2>
-			    <p>It is often difficult for you to relate to other people's feelings.</p>
-				<select class="option-selected form-control" id="q6" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q7star" class="qstar" >Question 7</p></strong></h2>
-			    <p>In a discussion, truth should be more important that people's sensitivities.</p>
-				<select class="option-selected form-control" id="q7" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q8star" class="qstar" >Question 8</p></strong></h2>
-			    <p>You rarely get carried away by fantasies and ideas.</p>
-				<select class="option-selected form-control" id="q8" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q9star" class="qstar" >Question 9</p></strong></h2>
-			    <p>You think that everyone's views should be respected regardless of whether they are supported by facts or not.</p>
-				<select class="option-selected form-control" id="q9" required>
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="col-md-12">
-			    <h2><strong><p id="q10star" class="qstar" >Question 10</p></strong></h2>
-			    <p>You feel more energetic after spending time with a group of people.</p>
-				<select required class="option-selected form-control" id="q10">
-					<option selected disabled>Select an Option</option>
-					<option value="1">1 (Strongly Disagree)</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 (Strongly Agree)</option>
-				</select>
-			</div>
-	  	</div>
-		  	
-		<br><br>
-  		<button type="submit" class="btn btn-primary btn-block" id="submitSurvey">
-	  		<span class="glyphicon glyphicon-ok" aria-hidden="true">
-	  		Submit
-	  		</span>
-  		</button>
-	</form> 
-
-</div>  <!-- end of container div -->
-<!-- modal for all messages -->
-<div class="modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="results-modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-		<div class="modal-header">
-			<h4 class="modal-title text-center" id="gridSystemModalLabel"><span class="close" id="xclose">&times;</span><strong id="results-title" class="text-center"></strong></h4>
-		</div>
-		<div class="modal-body">
-			<div class="row" class="modal-body">
-				<!-- <div class="md-col-2 modal-body"></div> -->
-				<div class="md-col-12 modal-body"">
-					<div id="results"></div>
+			<div class="row">
+				<div class="col-md-12">
+			    	<h2><label>About You</label></h2>
+				  	<div class="form-group">
+					    <label for="name">Name (Required)</label>
+					    <input placeholder="name" type="text" class="form-control" id="name" required />
+				  	</div>
+				  	<div class="form-group">
+					    <label for="photo" required>Link to Photo Image (Required)</label>
+					    <input type="text" placeholder="url" class="form-control" id="photo" required />
+				  	</div>
 				</div>
-				<!-- <div class="md-col-2"></div> -->
+			</div>	
+		  	<div class="row">
+		  		<div class="col-md-12">	
+				    <h2><strong><p id="q1star" class="qstar">Question 1</p></strong></h2>
+				    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+					<select class="option-selected form-control" id="q1" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q2star" class="qstar" >Question 2</p></strong></h2>
+				    <p>Generally speaking, you rely more on experience than your imagination.</p>
+					<select class="option-selected form-control" id="q2" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q3star" class="qstar" >Question 3</p></strong></h2>
+				    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+					<select class="option-selected form-control" id="q3" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q4star" class="qstar" >Question 4</p></strong></h2>
+				    <p>You rarely do something just out of sheer curiosity.</p>
+					<select class="option-selected form-control" id="q4" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q5star" class="qstar" >Question 5</p></strong></h2>
+				    <p>People can rarely upset you.</p>
+					<select class="option-selected form-control" id="q5" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q6star" class="qstar" >Question 6</p></strong></h2>
+				    <p>It is often difficult for you to relate to other people's feelings.</p>
+					<select class="option-selected form-control" id="q6" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q7star" class="qstar" >Question 7</p></strong></h2>
+				    <p>In a discussion, truth should be more important that people's sensitivities.</p>
+					<select class="option-selected form-control" id="q7" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q8star" class="qstar" >Question 8</p></strong></h2>
+				    <p>You rarely get carried away by fantasies and ideas.</p>
+					<select class="option-selected form-control" id="q8" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q9star" class="qstar" >Question 9</p></strong></h2>
+				    <p>You think that everyone's views should be respected regardless of whether they are supported by facts or not.</p>
+					<select class="option-selected form-control" id="q9" required>
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-12">
+				    <h2><strong><p id="q10star" class="qstar" >Question 10</p></strong></h2>
+				    <p>You feel more energetic after spending time with a group of people.</p>
+					<select required class="option-selected form-control" id="q10">
+						<option selected disabled>Select an Option</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>
+		  	</div>	  	
+			<br><br>
+	  		<button type="submit" class="btn btn-primary btn-block" id="submitSurvey">
+		  		<span class="glyphicon glyphicon-ok" aria-hidden="true">
+		  		Submit
+		  		</span>
+	  		</button>
+		</form> 
+	</div>  <!-- end of container div -->
+	<!-- modal for all messages -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="results-modal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title text-center" id="gridSystemModalLabel"><span class="close" id="xclose">&times;</span><strong id="results-title" class="text-center"></strong></h4>
 			</div>
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-results-modal">Close</button>
-		</div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<br>
-<br>
-
-<footer class="footer">
-      <div class="container text-center">
-      		<a href="/api/friends">API Friends</a>	|	<a href="https://github.com/FionaHM">GitHub Repo</a>
-        <!-- <span class="text-muted">Place sticky footer content here.</span> -->
-      </div>
-</footer>
-<br>
-<br>
-
+			<div class="modal-body">
+				<div class="row" class="modal-body">
+					<div class="md-col-12 modal-body"">
+						<div id="results"></div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-results-modal">Close</button>
+			</div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<br>
+	<br>
+	<!-- footer start -->
+	<footer class="footer">
+	      <div class="container text-center">
+	      		<a href="/api/friends">API Friends</a>	|	<a href="https://github.com/FionaHM">GitHub Repo</a>
+	      </div>
+	</footer>
+	<br>
+	<br>
 </body>
 <script type="text/javascript">
  // // when the user clicks the submit button 
  // //post the data to the server
-
  $('#submitSurvey').on('click', function(e){
+ 	// create object for input data
  	var newFriend = {
  		name: "",
  		photo: "",
  		scores: []
- 	};
- 	
- 	e.preventDefault(); // stop the page refresh
- 	// grab the values from the fields
+ 	};	
+ 	// stop the page refresh
+ 	e.preventDefault(); 
+ 	// grab the values from the html fields
  	newFriend.name = $('#name').val();
  	newFriend.photo = $('#photo').val();
  	// flag to highlight unanswered question
  	var nullQuestion = false;
- 	var nullQuestionNumber = "";
+ 	// var nullQuestionNumber = "";
 	// // loop through each question and save to array scores.
 	$('.option-selected').each(function( i ) {
 		newFriend.scores.push(parseInt($(this).val()));
 		$(this).css('color', 'black');
 		if ($(this).val() === null){
 			nullQuestion = true;
-			// nullQuestionNumber = $(this).attr('id');
+			// set font color of option to red
 			$(this).css('color', 'red');
 		}
-
 	});
-
 	// post to server
  	var currentURL = window.location.origin;
+ 	// do some validation of the input data
  	if ((newFriend.name === "")) {
+ 		// if name is not entered
 		missingNameData();
  	} else if (newFriend.photo === "") {
- 		// verify it is a url
+ 		// if no photo link
  		missingPhotoData();
  	}
+ 	// if a question not answered
  	else if (nullQuestion) {
- 		var title = "Answer All Questions!" ;
-		var message1 = '<p>Please answer <em>ALL</em> questions</p>';
-		var messageArr = [title, message1];
-		modalMessage(messageArr);
+		nullQuestion()
  	}  else {
-	 	// reset form data
+	 	// all fields answered then post the data 
+	 	// first reset form data
 		$('#name').val("");
 	 	$('#photo').val("");
 	 	$('.option-selected').each(function( i ) {
 			$(this).prop('selectedIndex',0);
 		});
 		$.post(currentURL + '/api/friends', newFriend, function(data){
-		// modal with best match
-			// $('#results-modal').show();
+			// modal with best match
 			var title = "<h1>Best Match</h1>";
 			var message1 = '<div class="text-center"><strong><h2>' + data.name + '</h2></strong>';
 			var message2 = '<div class="text-center"><img src="' + data.photo +'" alt="Image Address:' + data.photo + '" class="results-img"/></div>';
 			// console.log(data);
 			var messageArr = [title, message1, 
 			message2 ];
-
 			modalMessage(messageArr);
 		});
 	}
@@ -289,29 +278,31 @@
 });
 
 
- $('#close-results-modal').on('click', function(){
- 	$('#results-modal').hide();
- })
+// close modal button
+$('#close-results-modal').on('click', function(){
+	$('#results-modal').hide();
+})
 
+// close modal x
+$('#xclose').on('click', function(){
+	$('#results-modal').hide();
+})
 
- $('#xclose').on('click', function(){
- 	$('#results-modal').hide();
- })
-
- $('#photo').on('click', function(){
+// photo input field
+$('#photo').on('click', function(){
 	if ($('#name').val() === ""){
 		missingNameData();
 	}
- });
+});
 
+// q1 input field
+$('#q1').on('click', function(){
+	if ($('#photo').val() === ""){
+		missingPhotoData();
+	}
+});
 
- $('#q1').on('click', function(){
- 	if ($('#photo').val() === ""){
- 		missingPhotoData();
- 	}
- });
-
-
+// modal box data population
 function modalMessage(messageArr){
 	$('#results').html("");
 	$('#results-modal').show();
@@ -319,23 +310,28 @@ function modalMessage(messageArr){
 	for (var i = 1; i < messageArr.length; i++){
 	   $('#results').append(messageArr[i] + '<br><br>');
 	}
-
 }
-
+// name missing
 function missingNameData(){
 	var title = "Data Missing!";
 	var message1 = '<p>Please enter your name, it is required to proceed.</p>';
 	var messageArr = [title, message1];
 	modalMessage(messageArr);
 }
-
+// photo link missing
 function missingPhotoData(){
 	var title = "Data Missing!";
 	var message1 = '<p>Please add a link to your photo, it is required to proceed.</p>';
 	var message2 = '<p>Use the format http://linktophoto.com</p>';
 	var messageArr = [title, message1, message2];
 	modalMessage(messageArr);
-
+}
+// questions not answered
+function nullQuestion(){
+	var title = "Answer All Questions!" ;
+	var message1 = '<p>Please answer <em>ALL</em> questions</p>';
+	var messageArr = [title, message1];
+	modalMessage(messageArr);
 }
 
 </script>

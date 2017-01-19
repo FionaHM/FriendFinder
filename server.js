@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-
+// access the express() function via the variable app
 var app = express();
 // setting the env variable allows this to be deployed easily to Heroku 
 var PORT = process.env.PORT || 8080; 
@@ -13,15 +13,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
- 
-
-
-
 // link to apiRoutes file passing the app variable.
 require('./app/routing/apiRoutes.js')(app);
-
 // link to htmlRoutes file passing the app variable.
 require('./app/routing/htmlRoutes.js')(app);
-
-
+// listen on the appropriate port - 8080 if local or the heroku configured port
 app.listen(PORT);
