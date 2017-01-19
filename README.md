@@ -12,18 +12,21 @@ The application is started on the commandline as follows:
 
 This will bring run a server instance listening on port 8080 locally or whatever port is used by the Heroku environment.
 
->The application is structured as follows:
->![Image of screen1.png]
+```>The application is structured as follows:
+
+![Image of screen1.png]
 (readme_images/screen1.png)
 
 
-> The data in this appliation is transient, it is stored in memory in an array, and will be lost when the server is restarted. 
+```> The data in this appliation is transient, it is stored in memory in an array, and will be lost when the server is restarted. 
 
 #  Files
 
 ## Application Entry:
 
-### server.js 	-	this is the server side process. It is a node application, specifically express.js.  When this file is started up on the command line it starts an express.js server that listens on a predefined port for client connections. It then routes the connections based on the configuration data set in the htmlRoutes.js and apiRoutes.js files.  This file also contains middleware information, in the form of the library body-parser, that parses incoming data to the required format.
+### server.js 
+
+This is the server side process. It is a node application, specifically express.js.  When this file is started up on the command line it starts an express.js server that listens on a predefined port for client connections. It then routes the connections based on the configuration data set in the htmlRoutes.js and apiRoutes.js files.  This file also contains middleware information, in the form of the library body-parser, that parses incoming data to the required format.
 
 ###  htmlRoutes.js 
 
@@ -54,7 +57,10 @@ This contains routing information for api calls. It has one GET and one POST rou
 "/api/friends"  - this is used to update friends array on the server and then find a friend match, the results are send in JSON format back to the client where they can be displayed on the html page.
 
 ##   Data: 
-friends.js  -	This file contains an array of JSON objects that are used as seed data.
+
+###  friends.js 
+
+This file contains an array of JSON objects that are used as seed data.
 
 
 ##   Other:
@@ -87,7 +93,6 @@ This library parses incoming request bodies in a middleware, available under the
 ### express
 
 This is a web framework for node.js.  
-
 
 
 #  License
